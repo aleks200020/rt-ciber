@@ -11,7 +11,7 @@ auditor = st.text_input("Auditor responsable")
 st.header("2. Clasificación del Alcance")
 
 q1 = st.radio(
-"¿El alcance es a Gobierno o Estrategia de Ciberseguridad?",
+"¿El alcance de la auditoría es al Gobierno o a la Estrategia de Ciberseguridad?",
 ["SI","NO"]
 )
 
@@ -24,7 +24,7 @@ if q1 == "SI":
 else:
 
     q2 = st.radio(
-    "¿El alcance es a Gestión de Riesgos?",
+    "¿El alcance del encargo es a cómo se Gestionan los Riesgos de Ciberseguridad?",
     ["SI","NO"]
     )
 
@@ -35,7 +35,7 @@ else:
     else:
 
         q3 = st.radio(
-        "¿El alcance es a proceso específico?",
+        "¿El alcance es a un proceso específico de Ciberseguridad, ej. Evaluar monitoreo de Ciberseguridad?",
         ["SI","NO"]
         )
 
@@ -46,7 +46,7 @@ else:
         else:
 
             q4 = st.radio(
-            "¿El alcance es a control específico?",
+            "¿El alcance es a control específico de Ciberseguridad. Ej. Evaluar la gestión de Accesos??",
             ["SI","NO"]
             )
 
@@ -56,14 +56,14 @@ else:
 
             else:
 
-                dominio = "Evaluar mediante análisis de riesgo"
+                dominio = "Evaluar mediante análisis de riesgo de activos"
 
 st.success("Dominio sugerido: " + dominio)
 
 st.header("3. Evaluación de Activos")
 
 numero = st.number_input(
-"Cantidad de sistemas a evaluar",
+"Cantidad de sistemas o activos a evaluar",
 1,
 20,
 1
@@ -71,15 +71,15 @@ numero = st.number_input(
 
 risk_questions = [
 
-("Incluye sistemas o aplicaciones",3),
-("Procesa información organizacional",3),
-("Impacto en operaciones o reputación",4),
-("Controles de seguridad relevantes",6),
-("Sistema crítico",3),
-("Requisito regulatorio",3),
-("Conectado a terceros o nube",2),
-("Incidentes previos",3),
-("Expuesto a internet",4)
+("¿Incluye sistemas o aplicaciones?",3),
+("¿Procesa información organizacional?",3),
+("¿Tiene Impacto en operaciones o reputacional?",4),
+("¿Tiene o es un Control de seguridad relevantes?",6),
+("¿Es un Sistema crítico?",3),
+("¿Hace parte de un Requisito regulatorio?",3),
+("¿Esta Conectado a terceros o nube?",2),
+("¿Ha tenido Incidentes de seguridad previos?",3),
+("¿Esta Expuesto a internet?",4)
 
 ]
 
